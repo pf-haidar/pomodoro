@@ -76,9 +76,9 @@ export default {
       mostrarIntervalo: false,
       tempoReduzindo: false,
       tempoAtual: null,
-      totalSegundos: 0.1 * 60,
+      totalSegundos: 25 * 60,
       textoBotao: "Começar",
-      contador: 3,
+      contador: 0,
       alertAudio: new Audio(alert)
     };
   },
@@ -102,7 +102,7 @@ export default {
           } else {
             this.intervaloAtivo = false;
           }
-          this.totalSegundos = 0.1 * 60;
+          this.totalSegundos = 25 * 60;
           this.textoBotao = "Começar";
           this.parar();
           this.alertAudio.play();
@@ -124,7 +124,7 @@ export default {
     },
     ativarIntervalo() {
       this.intervaloAtivo = true;
-      this.totalSegundos = 0.1 * 60;
+      this.totalSegundos = 5 * 60;
       this.comecar();
     },
     ativarIntervaloLongo() {
