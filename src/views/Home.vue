@@ -76,9 +76,9 @@ export default {
       mostrarIntervalo: false,
       tempoReduzindo: false,
       tempoAtual: null,
-      totalSegundos: 25 * 60,
+      totalSegundos: 0.2 * 60,
       textoBotao: "Começar",
-      contador: 0,
+      contador: 3,
       alertAudio: new Audio(alert)
     };
   },
@@ -102,7 +102,7 @@ export default {
           } else {
             this.intervaloAtivo = false;
           }
-          this.totalSegundos = 25 * 60;
+          this.totalSegundos = 0.2 * 60;
           this.textoBotao = "Começar";
           this.parar();
           this.alertAudio.play();
@@ -120,16 +120,16 @@ export default {
     resetar() {
       this.parar();
       this.textoBotao = "Começar";
-      this.totalSegundos = 25 * 60;
+      this.totalSegundos = 0.2 * 60;
     },
     ativarIntervalo() {
       this.intervaloAtivo = true;
-      this.totalSegundos = 5 * 60;
+      this.totalSegundos = 0.1 * 60;
       this.comecar();
     },
     ativarIntervaloLongo() {
       this.intervaloAtivo = true;
-      this.totalSegundos = 10 * 60;
+      this.totalSegundos = 0.3 * 60;
       this.comecar();
     },
     resetarContador() {
